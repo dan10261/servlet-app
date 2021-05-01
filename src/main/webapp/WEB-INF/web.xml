@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <web-app>
+
+	<filter>
+		<filter-name>Basic Filter</filter-name>
+		<filter-class>firstWebApp.filters.BasicFillter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Basic Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
 	<listener>
 		<listener-class>
 			firstWebApp.ApplicationEventListener
@@ -68,7 +78,7 @@
 		<servlet-name>MessageServlet</servlet-name>
 		<url-pattern>/message</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>CounterServlet</servlet-name>
 		<servlet-class>firstWebApp.CounterServlet</servlet-class>
@@ -84,7 +94,7 @@
 		<res-type>javax.sql.DataSource</res-type>
 		<res-auth>Container</res-auth>
 	</resource-ref>
-	
-	
+
+
 
 </web-app>
