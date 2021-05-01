@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+	<listener>
+		<listener-class>
+			firstWebApp.ApplicationEventListener
+		</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>HostManager</servlet-name>
+		<servlet-class>firstWebApp.HelloWorld</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HostManager</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RequestDemoServlet</servlet-name>
+		<servlet-class>firstWebApp.RequestDemoServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RequestDemoServlet</servlet-name>
+		<url-pattern>/requestDemo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetPostDemoServlet</servlet-name>
+		<servlet-class>firstWebApp.GetPostDemoServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetPostDemoServlet</servlet-name>
+		<url-pattern>/getPostDemo</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>BookStoreServlet</servlet-name>
+		<servlet-class>firstWebApp.BookStoreServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BookStoreServlet</servlet-name>
+		<url-pattern>/booklist</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BookDetailServlet</servlet-name>
+		<servlet-class>firstWebApp.BookDetailServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BookDetailServlet</servlet-name>
+		<url-pattern>/bookdetail</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>MessageServlet</servlet-name>
+		<servlet-class>firstWebApp.MessageServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MessageServlet</servlet-name>
+		<url-pattern>/message</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CounterServlet</servlet-name>
+		<servlet-class>firstWebApp.CounterServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CounterServlet</servlet-name>
+		<url-pattern>/counter</url-pattern>
+	</servlet-mapping>
+
+	<resource-ref>
+		<res-ref-name>jdbc/cav</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	
+	
+
+</web-app>
